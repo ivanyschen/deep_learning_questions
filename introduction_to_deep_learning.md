@@ -132,7 +132,7 @@ A9. This will invoke broadcasting, so b is copied three times to become (3,3), a
   
 Q10. Consider the following computation graph. What is the outpu J?  
   
-![](/img/wk2_img2.png)
+![](/img/wk2_img1.png)
   
 A10. J = (a - 1) * (b + c)
 ### Week 3
