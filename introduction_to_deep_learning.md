@@ -70,7 +70,7 @@ Q1. A neuron computes a linear function (z = Wx + b) followed by an activation f
   
 **A2. Which of these is the "Logistic Loss"?**
   
-Q2. ![equation](https://latex.codecogs.com/gif.latex?\large&space;L(y_\text{pred}^{(i)},&space;y_\text{true}^{(i)})&space;=&space;y_\text{true}^{(i)}&space;\log{y_\text{pred}^{(i)}}&space;&plus;&space;(1-y_\text{true}^{(i)})&space;\log(1&space;-&space;y_\text{pred}^{(i)})))
+Q2. ![equation](https://latex.codecogs.com/gif.latex?\large&space;L(y_\text{pred}^{(i)},&space;y_\text{true}^{(i)})&space;=&space;y_\text{true}^{(i)}&space;\log{y_\text{pred}^{(i)}}&space;&plus;&space;(1-y_\text{true}^{(i)})&space;\log(1&space;-&space;y_\text{pred}^{(i)}))
 ### Week 3
 
 ### Week 4
