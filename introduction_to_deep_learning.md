@@ -59,8 +59,18 @@ which of the following are true? (Check all that apply.)**
 A10.
   - Increasing the size of a neural network generally does not hurt an algorithm’s performance, and it may help significantly.
   - Increasing the training set size generally does not hurt an algorithm’s performance, and it may help significantly. 
-### Week 2
+  
+  
+  
+### Week 2: Neural Network Basics
 
+**A1. What does a neuron compute?**  
+  
+Q1. A neuron computes a linear function (z = Wx + b) followed by an activation function
+  
+**A2. Which of these is the "Logistic Loss"?**
+  
+Q2. ![equation](https://latex.codecogs.com/gif.latex?\large&space;L(y_\text{pred}^{(i)},&space;y_\text{true}^{(i)})&space;=&space;y_\text{true}^{(i)}&space;\log{y_\text{pred}^{(i)}}&space;&plus;&space;(1-y_\text{true}^{(i)})&space;\log(1&space;-&space;y_\text{pred}^{(i)}))" title="\large L(y_\text{pred}^{(i)}, y_\text{true}^{(i)}) = y_\text{true}^{(i)} \log{y_\text{pred}^{(i)}} + (1-y_\text{true}^{(i)}) \log(1 - y_\text{pred}^{(i)})))
 ### Week 3
 
 ### Week 4
