@@ -49,7 +49,8 @@ A8.
   
 **Q9. In this diagram which we hand-drew in lecture, 
 what do the horizontal axis (x-axis) and vertical axis (y-axis) represent?**  
-  
+
+![](/img/wk1_img2.png)
 A9. x-axis is the amount of data. y-axis (vertical axis) is the performance of the algorithm.  
 
 **Q10. Assuming the trends described in the previous question's figure are accurate (and hoping you got the axis labels right), 
