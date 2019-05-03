@@ -12,7 +12,9 @@ A2.
   - We have access to a lot more computational power. 
   
 **Q3. Recall this diagram of iterating over different ML ideas. Which of the statements below are true? (Check all that apply.)**  
-  
+
+![][img/wk1_img1.png?raw=true]
+ 
 A3. 
   - Being able to try out ideas quickly allows deep learning engineers to iterate more quickly. 
   - Faster computation can help speed up how long a team takes to iterate to a good idea. 
