@@ -64,13 +64,77 @@ A10.
   
 ### Week 2: Neural Network Basics
 
-**A1. What does a neuron compute?**  
+**Q1. What does a neuron compute?**  
   
-Q1. A neuron computes a linear function (z = Wx + b) followed by an activation function
+A1. A neuron computes a linear function (z = Wx + b) followed by an activation function
   
-**A2. Which of these is the "Logistic Loss"?**
+**Q2. Which of these is the "Logistic Loss"?**
   
-Q2. ![equation](https://latex.codecogs.com/gif.latex?\large&space;L(y_\text{pred}^{(i)},&space;y_\text{true}^{(i)})&space;=&space;y_\text{true}^{(i)}&space;\log{y_\text{pred}^{(i)}}&space;&plus;&space;(1-y_\text{true}^{(i)})&space;\log(1&space;-&space;y_\text{pred}^{(i)}))
+A2. ![equation](https://latex.codecogs.com/gif.latex?\large&space;L(y_\text{pred}^{(i)},&space;y_\text{true}^{(i)})&space;=&space;y_\text{true}^{(i)}&space;\log{y_\text{pred}^{(i)}}&space;&plus;&space;(1-y_\text{true}^{(i)})&space;\log(1&space;-&space;y_\text{pred}^{(i)}))
+  
+**Q3. Suppose img is a (32,32,3) array, representing a 32x32 image with 3 color channels red, green and blue. How do you reshape this into a column vector?**. 
+  
+A3. x = img.reshape((32*32*3,1))  
+  
+**Q4. Consider the two following random arrays "a" and "b". What will be the shape of "c"?**
+```
+a = np.random.randn(2, 3) # a.shape = (2, 3)
+b = np.random.randn(2, 1) # b.shape = (2, 1)
+c = a + b
+```
+  
+A4. c.shape = (2, 3)  
+  
+**Q5. Consider the two following random arrays "a" and "b". What will be the shape of "c"?**
+```
+a = np.random.randn(4, 3) # a.shape = (4, 3)
+b = np.random.randn(3, 2) # b.shape = (3, 2)
+c = a*b
+```
+  
+A5. The computation cannot happen because the sizes don't match. It's going to be "Error"!
+  
+**Q6. Suppose you have n input features per example. Recall that X = [x(1)x(2)...x(m)] What is the dimension of X? **
+  
+A6. (n, m)  
+  
+**Q7. Consider the two following random arrays "a" and "b"**  
+```
+a = np.random.randn(12288, 150) # a.shape = (12288, 150)
+b = np.random.randn(150, 45) # b.shape = (150, 45)
+c = np.dot(a,b)
+```
+A7. (12288, 45)  
+  
+**Q8. How to vectorize the process?**  
+```
+# a.shape = (3,4)
+# b.shape = (4,1)
+
+for i in range(3):
+  for j in range(4):
+    c[i][j] = a[i][j] + b[j]
+```
+  
+A8.
+```
+c = a + b.T
+```
+
+**Q9. Consider the following code. What will be c?**  
+```
+a = np.random.randn(3, 3)
+b = np.random.randn(3, 1)
+c = a * b
+```
+  
+A9. This will invoke broadcasting, so b is copied three times to become (3,3), and \∗ is an element-wise product so c.shape will be (3, 3)  
+  
+Q10. Consider the following computation graph. What is the outpu J?  
+  
+![](/img/wk2_img2.png)
+  
+A10. J = (a - 1) * (b + c)
 ### Week 3
 
 ### Week 4
