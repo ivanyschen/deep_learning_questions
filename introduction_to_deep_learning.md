@@ -135,6 +135,41 @@ Q10. Consider the following computation graph. What is the outpu J?
 ![](/img/wk2_img1.png)
   
 A10. J = (a - 1) * (b + c)
-### Week 3
+### Week 3: Shallow Neural Networks
+**Q1. Which of the following are true? (Check all that apply)**  
+  
+A1.
+  
+**Q2. The tanh activation usually works better than sigmoid activation function for hidden units because the mean of its output is closer to zero, and so it centers the data better for the next layer. True/False?**
+
+A2. True  
+  
+**Q3. **  
+  
+A3. 
+  
+**Q4. You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer? **
+
+A4. Sigmoid  
+  
+**Q5. Consider the following code. What will be B.shape?**
+```
+A = np.random.randn(4,3)
+B = np.sum(A, axis = 1, keepdims = True)
+```
+  
+A5. (A, 1)  
+  
+**Q6. Suppose you have built a neural network. You decide to initialize the weights and biases to be zero. Which of the following statements are True? (Check all that apply)**  
+  
+A6. Each neuron in the first hidden layer will perform the same computation. So even after multiple iterations of gradient descent each neuron in the layer will be computing the same thing as other neurons. 
+
+**Q7. Logistic regression’s weights w should be initialized randomly rather than to all zeros, because if you initialize to all zeros, then logistic regression will fail to learn a useful decision boundary because it will fail to “break symmetry”, True/False?**
+
+A7. False  
+  
+**Q8. You have built a network using the tanh activation for all the hidden units. You initialize the weights to relative large values, using np.random.randn(..,..)\*1000. What will happen? **
+
+A8. This will cause the inputs of the tanh to also be very large, thus causing gradients to be close to zero. The optimization algorithm will thus become slow. 
 
 ### Week 4
