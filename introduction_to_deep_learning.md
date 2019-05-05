@@ -144,11 +144,11 @@ A1.
 
 A2. True  
   
-**Q3. **  
+**Q3**  
   
 A3. 
   
-**Q4. You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer? **
+**Q4. You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer?**  
 
 A4. Sigmoid  
   
@@ -168,8 +168,8 @@ A6. Each neuron in the first hidden layer will perform the same computation. So 
 
 A7. False  
   
-**Q8. You have built a network using the tanh activation for all the hidden units. You initialize the weights to relative large values, using np.random.randn(..,..)\*1000. What will happen? **
-
+**Q8. You have built a network using the tanh activation for all the hidden units. You initialize the weights to relative large values, using np.random.randn()\*1000. What will happen?**  
+  
 A8. This will cause the inputs of the tanh to also be very large, thus causing gradients to be close to zero. The optimization algorithm will thus become slow. 
 
 ### Week 4
