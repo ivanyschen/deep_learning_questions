@@ -140,7 +140,7 @@ A10. J = (a - 1) * (b + c)
   
 A1.  
   - \[ ] <img src="https://latex.codecogs.com/gif.latex?\inline&space;a^{[2](12)}" title="a^{[2](12)}" /> denotes activation vector of the 12th layer on the 2nd training example
-  - \[v] is the activation output by the 4th neuron of the 2nd layer
+  - \[x] is the activation output by the 4th neuron of the 2nd layer
   - \[ ] X is a matrix in which each row is one training example
   - \[x] X is a matrix in which each column is one training example
   - \[x] <img src="https://latex.codecogs.com/gif.latex?\inline&space;a^{[2](12)}" title="a^{[2](12)}" /> denotes the activation vector of the 2nd layer for the 12th training example
@@ -193,4 +193,40 @@ A9.
 **Q10. In the same network as the previous question, what are the dimensions of <img src="https://latex.codecogs.com/gif.latex?\inline&space;Z^{[1]}" title="Z^{[1]}" /> and <img src="https://latex.codecogs.com/gif.latex?\inline&space;A^{[1]}" title="A^{[1]}" />?**
 
 A10. Both (4, m)
-### Week 4
+  
+
+### Week 4 Key concepts on Deep Neural Networks
+  
+**Q1. What is the "cache" used for in our implementation of forward propagation and backward propagation?**
+
+A1. We use it to pass variables computed during forward propagation to the corresponding backward propagation step. It contains useful values for backward propagation to compute derivatives
+  
+**Q2. Among the following, which ones are "hyperparameters"? (Check all that apply.)** 
+  
+A2.
+  - \[ ] weight matrices
+  - \[x] learning rate
+  - \[x] number of iterations
+  - \[ ] acitvation values
+  - \[ ] bias vectors
+  - \[x] size of the hidden layers
+  - \[ ] number of layers in the neural network
+  
+**Q3. Which of the following statements is true? **
+  
+A2.
+  - \[x] The deeper layers of a neural network are typically computing more complex features of the input than the earlier layers. 
+  - \[ ] The earlier layers of a neural network are typically computing more complex features of the input than the deeper layers. 
+  
+**Q4. Vectorization allows you to compute forward propagation in an L-layer neural network without an explicit for-loop (or any other explicit iterative loop) over the layers l=1, 2, …,L. True/False?**
+
+A4. False (Vectorization helps reduce the for loops for passing each training instances.)
+  
+**Q5. Assume we store the values for <img src="https://latex.codecogs.com/gif.latex?\inline&space;n^{[l]}" title="n^{[l]}" /> in an array called layers, as follows: layer_dims = [nx,4,3,2,1]. So layer 1 has four hidden units, layer 2 has 3 hidden units and so on. Which of the following for-loops will allow you to initialize the parameters for the model?**
+
+A5.
+```
+for(i in range(1, len(layer_dims))):
+  parameter[‘W’ + str(i)] = np.random.randn(layers[i], layers[i-1])) * 0.01
+  parameter[‘b’ + str(i)] = np.random.randn(layers[i], 1) * 0.01
+```
