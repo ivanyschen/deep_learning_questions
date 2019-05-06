@@ -39,7 +39,7 @@ A6. Exploding gradient problem.
 A7. 100
 
 **Q8. Here’re the update equations for the GRU. Alice proposes to simplify the GRU by always removing the Γu. I.e., setting Γu = 1. Betty proposes to simplify the GRU by removing the Γr. I. e., setting Γr = 1 always. Which of these models is more likely to work without vanishing gradient problems even when trained on very long input sequences?**
-![](/img/sequence_model/wk1_img3.py)
+![](/img/sequence_model/wk1_img3.png)
 
 A8.
 - [ ] Alice’s model (removing Γu), because if Γr≈0 for a timestep, the gradient can propagate back through that timestep without much decay. 
@@ -49,7 +49,7 @@ A8.
 
 **Q9. Here are the equations for the GRU and the LSTM: From these, we can see that the Update Gate and Forget Gate in the LSTM play a role similar to _______ and ______ in the GRU. What should go in the the blanks?**
 
-![](/img/sequence_model/wk1_img4.py)
+![](/img/sequence_model/wk1_img4.png)
 
 A9. Γu and 1−Γu
 
