@@ -143,15 +143,19 @@ A1.
   - \[v] is the activation output by the 4th neuron of the 2nd layer
   - \[ ] X is a matrix in which each row is one training example
   - \[x] X is a matrix in which each column is one training example
-  - 
+  - \[x] <img src="https://latex.codecogs.com/gif.latex?\inline&space;a^{[2](12)}" title="a^{[2](12)}" /> denotes the activation vector of the 2nd layer for the 12th training example
+  - \[ ] <img src="https://latex.codecogs.com/gif.latex?\inline&space;a_{4}^{[2]}" title="a_{4}^{[2]}" /> is the activation output of the 2nd layer for the 4th training example
+  - \[x] <img src="https://latex.codecogs.com/gif.latex?\inline&space;a^{[2]}" title="a^{[2]}" /> denotes the activation vector of the 2nd layer
   
 **Q2. The tanh activation usually works better than sigmoid activation function for hidden units because the mean of its output is closer to zero, and so it centers the data better for the next layer. True/False?**
 
 A2. True  
   
-**Q3**  
+**Q3 Which of these is a correct vectorized implementation of forward propagation for layer l, where L1 ≤ l ≤ L?**  
   
 A3. 
+  - <img src="https://latex.codecogs.com/gif.latex?\inline&space;Z^{[l]}&space;=&space;W^{[l]}A^{[l-1]}&space;&plus;&space;b^{[l]}" title="Z^{[l]} = W^{[l]}A^{[l-1]} + b^{[l]}" />
+  - <img src="https://latex.codecogs.com/gif.latex?\inline&space;A^{[l]}&space;=&space;g^{l}(Z^{l})" title="A^{[l]} = g^{l}(Z^{l})" />
   
 **Q4. You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer?**  
 
@@ -176,5 +180,17 @@ A7. False
 **Q8. You have built a network using the tanh activation for all the hidden units. You initialize the weights to relative large values, using np.random.randn()\*1000. What will happen?**  
   
 A8. This will cause the inputs of the tanh to also be very large, thus causing gradients to be close to zero. The optimization algorithm will thus become slow. 
+  
+**Q9. Consider the following 1 hidden layer neural network. Which of the following statements are True? (Check all that apply).**  
+![](/img/wk2_img2.png)  
+  
+A9.  
+  - <img src="https://latex.codecogs.com/gif.latex?\inline&space;b^{[1]}" title="b^{[1]}" /> will have shape (4, 1)
+  - <img src="https://latex.codecogs.com/gif.latex?\inline&space;W^{[1]}" title="W^{[1]}" /> will have shape (4, 2)
+  - <img src="https://latex.codecogs.com/gif.latex?\inline&space;b^{[2]}" title="b^{[2]}" /> will have shape (1, 1)
+  - <img src="https://latex.codecogs.com/gif.latex?\inline&space;W^{[2]}" title="W^{[2]}" /> will have shape (1, 4)
+  
+**Q10. In the same network as the previous question, what are the dimensions of <img src="https://latex.codecogs.com/gif.latex?\inline&space;Z^{[1]}" title="Z^{[1]}" /> and <img src="https://latex.codecogs.com/gif.latex?\inline&space;A^{[1]}" title="A^{[1]}" />?**
 
+A10. Both (4, m)
 ### Week 4
