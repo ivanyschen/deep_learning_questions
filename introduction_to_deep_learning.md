@@ -138,7 +138,12 @@ A10. J = (a - 1) * (b + c)
 ### Week 3: Shallow Neural Networks
 **Q1. Which of the following are true? (Check all that apply)**  
   
-A1.
+A1.  
+  - \[ ] <img src="https://latex.codecogs.com/gif.latex?\inline&space;a^{[2](12)}" title="a^{[2](12)}" /> denotes activation vector of the 12th layer on the 2nd training example
+  - \[v] is the activation output by the 4th neuron of the 2nd layer
+  - \[ ] X is a matrix in which each row is one training example
+  - \[x] X is a matrix in which each column is one training example
+  - 
   
 **Q2. The tanh activation usually works better than sigmoid activation function for hidden units because the mean of its output is closer to zero, and so it centers the data better for the next layer. True/False?**
 
