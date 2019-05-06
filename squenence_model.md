@@ -7,7 +7,7 @@ A1. <img src="https://latex.codecogs.com/gif.latex?\inline&space;x^{(i)<j>}" tit
 
 **Q2. Consider this RNN. THe specific type of architecture is appropriate when:**
 
-![](/img/squence_model/wk1_img1.png)
+![](/img/sequence_model/wk1_img1.png)
 
 A2. <img src="https://latex.codecogs.com/gif.latex?\inline&space;T_x&space;=&space;T_y" title="T_x = T_y" />
 
