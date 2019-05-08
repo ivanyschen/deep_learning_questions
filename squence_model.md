@@ -56,3 +56,64 @@ A9. Γu and 1−Γu
 **Q10. You have a pet dog whose mood is heavily dependent on the current and past few days’ weather. You’ve collected data for the past 365 days on the weather, which you represent as a sequence as x<1>,…,x<365>. You’ve also collected data on your dog’s mood, which you represent as y<1>,…,y<365>. You’d like to build a model to map from <img src="https://latex.codecogs.com/gif.latex?\inline&space;x\rightarrow&space;y" title="x\rightarrow y" />. Should you use a Unidirectional RNN or Bidirectional RNN for this problem?**
 
 A10. Unidirectional RNN, because the value of y<t>y^{<t>}y<t> depends only on x<1>,…,x<t>, but not on x<t+1>,…,x<365>
+
+
+### Week 2 Natural Language Processing & Word Embeddings
+
+**Q1. Suppose you learn a word embedding for a vocabulary of 10000 words. Then the embedding vectors should be 10000 dimensional, so as to capture the full range of variation and meaning in those words.**
+
+A1. False
+
+**Q2. What is t-SNE?**
+
+A2. A non-linear dimensionality reduction technique
+
+**Q3. Suppose you download a pre-trained word embedding which has been trained on a huge corpus of text. You then use this word embedding to train an RNN for a language task of recognizing if someone is happy from a short snippet of text, using a small training set.
+Then even if the word “ecstatic” does not appear in your small training set, your RNN might reasonably be expected to recognize “I’m ecstatic” as deserving a label y=1.**
+
+A3. True
+
+**Q4. Which of these equations do you think should hold for a good word embedding? (Check all that apply) **
+
+A4. 
+- \[x] e_{boy} - e{girl} ~ e_{brother} - e_{sister}
+- \[ ] e_{boy} - e{girl} ~ e_{sister} - e_{brother}
+- \[x] e_{boy} - e_{brother} ~ e_{girl} - e_{sister}
+- \[ ] e_{boy} - e_{brother} ~ e_{sister} - e_{girl}
+
+**Q5. Let EEE be an embedding matrix, and let e1234e_{1234} be a one-hot vector corresponding to word 1234. Then to get the embedding of word 1234, why don’t we call E * e_{1234} in Python?**
+
+A5. It is computationally wasteful.
+
+**Q6. When learning word embeddings, we create an artificial task of estimating P(target∣context). It is okay if we do poorly on this artificial prediction task; the more important by-product of this task is that we learn a useful set of word embeddings. **
+
+A6. True
+
+**Q7. In the word2vec algorithm, you estimate P(t∣c), where ttt is the target word and ccc is a context word. How are ttt and ccc chosen from the training set? Pick the best answer.**
+
+A7. c and t are chosen to be nearby words.
+
+**Q8. Suppose you have a 10000 word vocabulary, and are learning 500-dimensional word embeddings. The word2vec model uses the following softmax function:**
+
+![](/img/sequence_model/wk2_img1.png)
+
+A8. 
+- \[x] \theta_{t} and e_{c} are both 500 dimensional vectors.
+- \[ ] \theta_{t} and e_{c} are both 10000 dimensional vectors.
+- \[x] \theta_{t} and e_{c} are both trained with an optimization algorithm such as Adam or gradient descent.
+- \[ ] After training, we should expect theta_{t} to be very close to e_c when t and c are the same word. 
+
+
+**Q9. Suppose you have a 10000 word vocabulary, and are learning 500-dimensional word embeddings.The GloVe model minimizes this objective:**
+
+![](/img/sequence_model/wk2_img2.png)
+
+A9.
+- \[ ] \theta_{i} and e_{j} should be initialized to 0 at the beginning of training
+- \[x] \theta_{i} and e_{j} should be initialized randomly at the beginning of training.
+- \[x] X_{ij} is the number of times word i appears in the context of word j.
+- \[x] The weighting function f(.) must satisfy f(0)=0.
+
+**Q10. You have trained word embeddings using a text dataset of m1 words. You are considering using these word embeddings for a language task, for which you have a separate labeled dataset of m2 words. Keeping in mind that using word embeddings is a form of transfer learning, under which of these circumstance would you expect the word embeddings to be helpful?**
+
+A10. m1 >> m2
