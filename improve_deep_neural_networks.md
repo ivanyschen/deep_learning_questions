@@ -76,7 +76,7 @@ A3.
 - \[ ] If the mini-batch size is 1, you end up having to process the entire training set before making any progress.  
   
 **Q4. Suppose your learning algorithm’s cost JJJ, plotted as a function of the number of iterations, looks like this. Which of the following do you agree with**  
-![]()  
+![](img/improve_deep_neural_networks/wk2_img1.png)
 A4.  
 - \[ ] Whether you’re using batch gradient descent or mini-batch gradient descent, this looks acceptable. 
 - \[ ] If you’re using mini-batch gradient descent, something is wrong. But if you’re using batch gradient descent, this looks acceptable. 
@@ -97,9 +97,29 @@ A6.
   
 **Q7. You use an exponentially weighted average on the London temperature dataset. You use the following to track the temperature: v_t=\beta v_{t−1}+(1−\beta)* \theta_t = The red line below was computed using beta=0.9. What would happen to your red curve as you vary β\betaβ? (Check the two that apply)**  
 A7.  
-!()[]
+![](img/improve_deep_neural_networks/wk2_img2.png)
 - \[ ] Decreasing \beta will shift the red line slightly to the right.
 - \[x] Increasing \beta will shift the red line slightly to the right.
 - \[x] Decreasing \beta will create more oscillation within the red line.
-- \[ ] Increasing \beta will create more oscillations within the red line.
+- \[ ] Increasing \beta will create more oscillations within the red line.  
+  
+**Q8. These plots were generated with gradient descent; with gradient descent with momentum (\beta = 0.5) and gradient descent with momentum (\beta = 0.9). Which curve corresponds to which algorithm?**
+![](img/improve_deep_neural_networks/wk2_img3.png)  
+A8. (1) is gradient descent. (2) is gradient descent with momentum (small \beta). (3) is gradient descent with momentum (large \beta)  
+  
+**Q9. Suppose batch gradient descent in a deep network is taking excessively long to find a value of the parameters that achieves a small value for the cost function**  
+A9.  
+- \[ ] Try mini-batch gradient descent 
+- \[x] Try using Adam
+- \[x] Try better random initialization for the weights
+- \[ ] Try initializing all the weights to zero
+- \[x] Try tuning the learning rate  
+  
+**Q10. Which of the following statements about Adam is False?**  
+A10. 
+- \[ ] The learning rate hyperparameter α\alphaα in Adam usually needs to be tuned.
+- \[ ] Adam combines the advantages of RMSProp and momentum
+- \[x] Adam should be used with batch gradient computations, not with mini-batches.
+- \[ ] We usually use “default” values for the hyperparameters (\beta_1 = 0.9, \beta_2 = 0.999, \epsilon=10^{−8})
+  
 ### Week3
