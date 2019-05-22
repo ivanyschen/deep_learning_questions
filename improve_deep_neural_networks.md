@@ -61,6 +61,45 @@ A9.
 **Q10. Why do we normalize the inputs?**
 A10. It makes the cost function faster to optimize  
   
-### Week2
-
+### Week2 Optimization algorithms
+**Q2. Which of these statements about mini-batch gradient descent do you agree with?**  
+A2.  
+- \[x] One iteration of mini-batch gradient descent (computing on a single mini-batch) is faster than one iteration of batch gradient descent.  
+- \[ ] You should implement mini-batch gradient descent without an explicit for-loop over different mini-batches, so that the algorithm processes all mini-batches at the same time (vectorization).  
+- \[ ] Training one epoch (one pass through the training set) using mini-batch gradient descent is faster than training one epoch using batch gradient descent.  
+  
+**Q3. Why is the best mini-batch size usually not 1 and not m, but instead something in-between?**  
+A3.  
+- \[x] If the mini-batch size is 1, you lose the benefits of vectorization across examples in the mini-batch.
+- \[x] If the mini-batch size is m, you end up with batch gradient descent, which has to process the whole training set before making progress. 
+- \[ ] If the mini-batch size is m, you end up with stochastic gradient descent, which is usually slower than mini-batch gradient descent. 
+- \[ ] If the mini-batch size is 1, you end up having to process the entire training set before making any progress.  
+  
+**Q4. Suppose your learning algorithm’s cost JJJ, plotted as a function of the number of iterations, looks like this. Which of the following do you agree with**  
+![]()  
+A4.  
+- \[ ] Whether you’re using batch gradient descent or mini-batch gradient descent, this looks acceptable. 
+- \[ ] If you’re using mini-batch gradient descent, something is wrong. But if you’re using batch gradient descent, this looks acceptable. 
+- \[ ] Whether you’re using batch gradient descent or mini-batch gradient descent, something is wrong. 
+- \[x] If you’re using mini-batch gradient descent, this looks acceptable. But if you’re using batch gradient descent, something is wrong.  
+  
+**Q5. \theta_1 = 10, \theta_2 = 10, v_0 = 0, beta = 0.5. Calculate v_2 and v_2^{corrected}**  
+A5.  
+v_2 = 7.5  
+v_2^{corrected} = 10  
+  
+**Q6. Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.**  
+A6. 
+- \[ ] \alpha = \frac{1}{1 + 2 * t} * \alpha_0
+- \[ ] \alpha = \frac{1}{t^{1/2}} * \alpha_0
+- \[x] \alpha = e^{t} * \alpha_0
+- \[ ] \alpha = 0.95^{t} * \alpha_0  
+  
+**Q7. You use an exponentially weighted average on the London temperature dataset. You use the following to track the temperature: v_t=\beta v_{t−1}+(1−\beta)* \theta_t = The red line below was computed using beta=0.9. What would happen to your red curve as you vary β\betaβ? (Check the two that apply)**  
+A7.  
+!()[]
+- \[ ] Decreasing \beta will shift the red line slightly to the right.
+- \[x] Increasing \beta will shift the red line slightly to the right.
+- \[x] Decreasing \beta will create more oscillation within the red line.
+- \[ ] Increasing \beta will create more oscillations within the red line.
 ### Week3
